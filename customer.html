@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="rail.css" />
+  </head>
+  <body
+    onload="document.customerform.fullname.focus();"
+    style="padding-top: 10px;background-color:#dedede;"
+  >
+    
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div style="padding-top: 30px;">
+            <form
+              name="customerform"
+              onsubmit="return formvalidation();"
+              action=""
+              method="POST"
+            >
+            <h1 style="padding-bottom:  25px;font-weight: bold;padding-top: 40px;">Customer Registration</h1>
+              <label for="">Name</label>
+              <input
+                style="margin-left: 140px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="fullname"
+                id=""
+              /><br /><br />
+
+              <label for="">Current Date</label>
+              <input required
+                style="margin-left: 92px;height:40px;border-radius: 7px;width:230px; "
+                type="date"
+                name=""
+                id="date"
+              /><br /><br />
+
+              <label for="">Phone Number</label>
+              <input
+                style="margin-left: 75px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="tel"
+                id=""
+              /><br /><br />
+
+              <label for="">Nationality</label>
+              <select  style="margin-left: 105px;height:40px;border-radius: 7px;width:230px;"name="origin" id="">
+              <option selected="" value="Default">Select your Nationality</option>
+
+<option value="">Ugandan</option>
+<option value="">Kenyan</option>
+<option value="">Sudanese</option>
+<option value="">Other</option>
+              </select>
+            
+              <br /><br />
+
+              <label for="">NIN</label>
+              <input
+                style="margin-left: 153px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="nin"
+                id=""
+              /><br /><br />
+
+              <label for="">Date of Birth</label>
+              <input required
+                style="margin-left: 92px;height:40px;border-radius: 7px;width:230px;"
+                type="date"
+                name="dob"
+                id=""
+              /><br /><br />
+
+              <label for="">Type of Vehicle</label>
+              <select
+                style="margin-left: 75px;width: 150px;height:40px;border-radius: 7px;width:230px;"
+                name="vehicle"
+                id=""
+              >
+              <option selected="" value="Default">Select your Vehicle</option>
+                <option value="">Bodabodas</option>
+                <option value="">Tuktuks</option>
+                <option value="">Tricycles</option>
+                <option value="">Other</option> </select
+              ><br /><br />
+
+              <label for="">Refree's Name</label>
+              <input
+                style="margin-left: 78px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="refna"
+                id=""
+              /><br /><br />
+
+              <label for="">Refree's Number</label>
+              <input
+                style="margin-left: 60px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="refno"
+                id=""
+              /><br /><br />
+
+              <label for="">Refree's Occupation</label>
+              <input
+                style="margin-left: 35px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="refoc"
+                id=""
+              /><br /><br />
+
+              <label for="">Date of Birth of Refree</label>
+              <input required
+                style="margin-left: 19px;height:40px;border-radius: 7px;width:230px;"
+                type="date"
+                name="refdob"
+                id=""
+              /><br /><br />
+
+              <label for="">Down Payment</label>
+              <input
+                style="margin-left: 70px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="payment"
+                id=""
+              /><br /><br />
+
+              <label for="">Marital Status</label>
+              <label style="margin-left: 80px;" for="">Single</label>
+              <input
+                style="margin-left: 5px;"
+                type="radio"
+                name="fmarried"
+                id=""
+              />
+
+              <label style="margin-left: 10px;" for="">Married</label>
+              <input style="margin-left: 10px;" name="fmarried" type="radio" />
+              <br /><br />
+
+              <label for="">Stage Name</label>
+              <input
+                style="margin-left: 90px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="stage"
+                id=""
+              /><br /><br />
+
+              <label for="">Local Council</label>
+              <label style="margin-left: 80px;" for="">LC1</label>
+              <input style="margin-left: 5px;" type="radio" name="lccc" id="lc" />
+
+              <label style="margin-left: 20px;" for="">LC3</label>
+              <input style="margin-left: 5px;" type="radio" name="lccc" id="lcc" />
+              <br /><br />
+
+              <label for="">Other Loans</label>
+              <input
+                style="margin-left: 90px;height:40px;border-radius: 7px;width:230px;"
+                type="text"
+                name="other"
+                id=""
+              /><br /><br />
+
+              <label for=""
+                >Confirmation of
+                <span style="position: relative;top:25px;right: 100px;"
+                  >Required</span
+                >
+                <span style="position: relative;top: 45px;right: 180px;"
+                  >Copies of Documents</span
+                ></label
+              >
+              <input
+                style="position: relative;right: 150px;"
+                type="checkbox"
+                name="confirm"
+                id=""
+              /><br /><br /><br /><br />
+
+              <button
+              style="margin-bottom: 10px;"
+                class="btn btn-primary"
+                type="submit"
+                name="submit"
+              >
+                Submit
+              </button>
+
+              <button
+                style="margin-left: 20px;margin-bottom: 10px;"
+                
+                class="btn btn-danger"
+                type="reset"
+              >
+                Cancel
+              </button>
+            </form>
+          </div>      
+        </div>
+        <div class="col-md-6">
+        <button style="margin-top:300px;margin-left: 180px;"type="button" class="btn btn-primary">CustomerID for BodaBoda</button>
+
+        <button style="margin-top:150px;margin-left: 185px;width: 215px;"type="button" class="btn btn-info">CustomerID for TukTuk</button>
+      </div>
+      </div>
+    </div>
+    <script src="customer.js"></script>
+  </body>
+</html>
