@@ -1,0 +1,257 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Customer registration form
+    link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="customerdet.css")
+  body(onload="document.customerreg.customerid.focus();")
+    .navbar
+      a(href="#home") Home
+      a(href="#news") View Details
+      .dropdown
+        button.dropbtn
+          | Register
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./registercustomer") Customer
+          a(href="./register") Sales Executive
+    h1(style="color:#4d81f1;")
+      center  CUSTOMER REGISTRATION FORM 2020
+    .container
+      .row
+        .col-md-12
+          .signup-content
+            .signup-form
+              form(method="POST" name="customerreg" action="/registercustomer" onsubmit="validate();")
+                .form-row
+                  .form-group
+                    .photo
+                      label.required(for="photo") Attach Photo
+                      |                                     ​
+                      input#photo(type="file" name="photo")
+                    br
+                    br
+                    .form-input
+                      label.required(for="customerid") Customer ID
+                      input#customerid(type="text" name="customerid")
+                    br
+                    .form-input
+                      label.required(for="currentdate") Current Date
+                      input#currentdate(type="date" name="currentdate")
+                  .form-group
+                    .form-input
+                      label.required(for="first_name") First name
+                      input#first_name(type="text" name="first_name")
+                    .form-input
+                      label.required(for="last_name") Last name
+                      input#last_name(type="text" name="last_name")
+                    .form-input
+                      label.required(for="email") Email
+                      input#email(type="text" name="email")
+                    .form-input
+                      label.required(for="phone_number") Phone number
+                      input#phone_number(type="text" name="phone_number")
+                    .form-input
+                      label.required(for="nin") National ID
+                      input#nin(type="text" name="nin")
+                    .form-input
+                      label.required(for="nationality") Nationality
+                      input#nationality(type="text" name="nationality")
+                  .form-group
+                    .form-input
+                      label.required(for="Birthday_day") Date of birth
+                      select#Birthday_Day(name="Birthday_day")
+                        option(value="-1") Day:
+                        option(value="1") 1
+                        option(value="2") 2
+                        option(value="3") 3
+                        option(value="4") 4
+                        option(value="5") 5
+                        option(value="6") 6
+                        option(value="7") 7
+                        option(value="8") 8
+                        option(value="9") 9
+                        option(value="10") 10
+                        option(value="11") 11
+                        option(value="12") 12
+                        option(value="13") 13
+                        option(value="14") 14
+                        option(value="15") 15
+                        option(value="16") 16
+                        option(value="17") 17
+                        option(value="18") 18
+                        option(value="19") 19
+                        option(value="20") 20
+                        option(value="21") 21
+                        option(value="22") 22
+                        option(value="23") 23
+                        option(value="24") 24
+                        option(value="25") 25
+                        option(value="26") 26
+                        option(value="27") 27
+                        option(value="28") 28
+                        option(value="29") 29
+                        option(value="30") 30
+                        option(value="31") 31
+                      select#Birthday_Month(name="Birthday_Month")
+                        option(value="-1") Month:
+                        option(value="January") Jan
+                        option(value="February") Feb
+                        option(value="March") Mar
+                        option(value="April") Apr
+                        option(value="May") May
+                        option(value="June") Jun
+                        option(value="July") Jul
+                        option(value="August") Aug
+                        option(value="September") Sep
+                        option(value="October") Oct
+                        option(value="November") Nov
+                        option(value="December") Dec
+                      select#Birthday_Year(name="Birthday_Year")
+                        option(value="-1") Year:
+                        option(value="2020") 2020
+                        option(value="2019") 2019
+                        option(value="2018") 2018
+                        option(value="2017") 2017
+                        option(value="2016") 2016
+                        option(value="2015") 2015
+                        option(value="2014") 2014
+                        option(value="2013") 2013
+                        option(value="2012") 2012
+                        option(value="2011") 2011
+                        option(value="2010") 2010
+                        option(value="2009") 2009
+                        option(value="2008") 2008
+                        option(value="2007") 2007
+                        option(value="2006") 2006
+                        option(value="2005") 2005
+                        option(value="2004") 2004
+                        option(value="2003") 2003
+                        option(value="2002") 2002
+                        option(value="2001") 2001
+                        option(value="2000") 2000
+                        option(value="1999") 1999
+                        option(value="1998") 1998
+                        option(value="1997") 1997
+                        option(value="1996") 1996
+                        option(value="1995") 1995
+                        option(value="1994") 1994
+                        option(value="1993") 1993
+                        option(value="1992") 1992
+                        option(value="1991") 1991
+                        option(value="1990") 1990
+                        option(value="1989") 1989
+                        option(value="1988") 1988
+                        option(value="1987") 1987
+                        option(value="1986") 1986
+                        option(value="1985") 1985
+                        option(value="1984") 1984
+                        option(value="1983") 1983
+                        option(value="1982") 1982
+                        option(value="1981") 1981
+                        option(value="1980") 1980
+                    br
+                    .form-input
+                      label.required(for="age") AGE
+                      input#age(type="text" name="age")
+                    br
+                    .form-radio
+                      .label-flex
+                        label(for="status") Marital status
+                      .form-radio-group
+                        .form-radio-item
+                          input#single(type="radio" name="status" value="single")
+                          label(for="single") Single
+                          span.check
+                        .form-radio-item
+                          input#married(type="radio" name="status" value="married")
+                          label(for="married") Married
+                          span.check
+                    .form-input
+                      label.required(for="village") Village/Parish
+                      input#village(type="text" name="village")
+                    .form-input
+                      label.required(for="division") Division/District
+                      input#division(type="text" name="division")
+                    .form-radio-group
+                      label.required(for="first_name") Permit
+                      .form-radio-item
+                        input#yes(type="radio" name="Permit" value="yes")
+                        label(for="yes") Yes
+                        span.check
+                      .form-radio-item
+                        input#no(type="radio" name="status" value="no")
+                        label(for="no") No
+                        span.check
+                hr
+                .form-row
+                  .form-group
+                    label.required(for="vehicle") Kind of Vehicle
+                    .select-list
+                      select#lop(name="vehicle")
+                        option(value="bodaboda") Boda Boda
+                        option(value="tuktuk") Tuk Tuk
+                        option(value="tricycle") Tricycle
+                    label.required(for="make") Type/Make
+                    input#make(type="text" name="make")
+                    br
+                    label.required(for="numberplate") Number Plate
+                    input#numberplate(type="text" name="numberplate")
+                    .form-input
+                      label.required(for="stagename") Stage name
+                      input#stagename(type="text" name="stagename")
+                      br
+                      label.required(for="stagejoin") Stage Join Date
+                      input#stagejoin(type="date" name="stagejoin")
+                      br
+                      label.required(for="stagechair") Stage Chairman
+                      input#stagechair(type="text" name="stagechair")
+                  .form-group
+                    label.required(for="loantype") Loan type
+                    select#lop(name="loantype")
+                      option(value="paydayloan") Payday Loan
+                      option(value="monthlyloan") Monthly Loan
+                      option(value="yearlyloan") Yearly Loan
+                    label.required(for="downpayment") Down Payment
+                    .select-list
+                      select#lop(name="vehicle")
+                        option(value="850000") Boda Boda
+                        option(value="950000") Tuk Tuk
+                        option(value="850000") Tricycle
+                    fieldset
+                      label(style="text-transform: none;") LC1
+                      legend
+                        label.required LC Stamps
+                      div(style="border-color: #329e5e;")
+                        input#lc1(type="file" name="lc1" value="")
+                      legend LC3
+                      div(style="border-color: #329e5e; ")
+                        input#lc3(type="file" name="lc3" value="")
+                    fieldset
+                      label(style="text-transform: none;") Attachments
+                      legend
+                        label.required Required Documents
+                      div(style="border-color: #329e5e;")
+                        input#reqdoc(type="file" name="reqdoc" value="")
+                        br
+                hr
+                h2(style="color:#4d81f1;") REFEREE SECTION 
+                .form-input
+                  label.required(for="name") Name
+                  input#name(type="text" name="name" value="")
+                .form-input
+                  label.required(for="phone_number") Phone number
+                  input#phone_number(type="text" name="phone_number" value="")
+                .form-input
+                  label.required(for="occupation") Occupation
+                  input#occupation(type="text" name="occupation" value="")
+                .form-input
+                  label.required(for="Birthday_day") Date of birth
+                  input#Birthday_day(type="date" name="Birthday_day" value="")
+                br
+                .form-submit
+                  input#submit.submit(type="submit" value="Submit" name="submit" onclick="validate()")
+                  input#cancel.submit(type="reset" value="Cancel" name="reset" onclick="reset();")
+    script(src="/customerdet.js")

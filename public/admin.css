@@ -1,0 +1,38 @@
+/* .outerdiv{
+    border-color: green;
+    background-color: greenyellow;
+    width: 1400px;
+    height: auto;
+} */
+
+.container{
+  border-color: aqua;  
+  width: 1000px;
+  margin: 0px;
+  background: #835f5f; 
+}
+
+.row{
+    background-color: indigo;
+    width: 1000px;
+    margin: 5px;
+    height: auto;
+}
+.col{
+    padding: 10px 5px;
+    margin: 5px;
+    width: 500px;
+    border: 1px solid;
+    color: #343434;
+    background-color: hotpink;
+    /* display: table-column; */
+  }
+
+.col-lg-6{
+    background-color: hotpink;
+    width: 300px;
+    margin: 5px;
+    height: 800px;
+    justify-content: space-evenly;
+}
+

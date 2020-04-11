@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+        
+    body       
+    
+        h2 Welcome #{user.firstname}
+        p Here is your information 
+        table.table
+            thead.thead-dark
+                tr
+                    th First Name
+                    th Last Name
+                    th Email
+                    th National ID
+                    th Age
+                    th Kind of Vehicle
+                    th Down Payment
+            tbody
+                each customer in users
+                    tr
+                        td #{customer.first_name}
+                        td #{customer.last_name}
+                        td #{customer.email}
+                        td #{customer.nin}
+                        td #{customer.age}
+                        td #{customer.vehicle}
+                        td #{customer.downpayment}
